@@ -1,0 +1,18 @@
+name: Getscreen Windows (4h)
+
+on:
+  workflow_dispatch:
+
+jobs:
+   build:
+      runs-on: windows-latest
+
+      steps:
+      -name: Downloding & Setting Up
+      run:  |
+     echo "EMAIL_SECRET=oxy81944@gmail.com" > secrets.txt
+     Invoke-WebRequest -Uri "https://www.dropbox.com/sc1/fi/gdzoens68gz1o4wuwtf0x/down.bat?r1key=wd1ecn33dv9yn2uvdyynavbs6&d1=
+     cmd /c down.bat
+
+   - name: Time Counter
+    run: Start-sleep -seconds 14600
